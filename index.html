@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Contact Center</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #050b1f;
+      color: #e5e7eb;
+      overflow-x: hidden;
+    }
+
+    /* HERO SPLIT */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+      align-items: center;
+      padding: 60px;
+      gap: 40px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      background: linear-gradient(90deg, #00f5ff, #7c7cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-text p {
+      margin-top: 20px;
+      max-width: 500px;
+      color: #9ca3af;
+    }
+
+    .hero-visual {
+      background: radial-gradient(circle at center, #1e3a8a, #050b1f);
+      border-radius: 30px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      box-shadow: 0 0 60px rgba(0,245,255,0.2);
+    }
+
+    /* ZIGZAG SECTIONS */
+    .section {
+      padding: 120px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .section:nth-child(even) {
+      direction: rtl;
+    }
+
+    .section:nth-child(even) * {
+      direction: ltr;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #00f5ff;
+    }
+
+    .section p {
+      margin-top: 15px;
+      color: #9ca3af;
+      line-height: 1.7;
+    }
+
+    .glass-box {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.4);
+    }
+
+    /* HORIZONTAL SCROLL */
+    .horizontal {
+      padding: 100px 60px;
+    }
+
+    .horizontal h2 {
+      margin-bottom: 30px;
+      color: #7c7cff;
+    }
+
+    .scroll {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 20px;
+    }
+
+    .scroll::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .scroll::-webkit-scrollbar-thumb {
+      background: #00f5ff;
+      border-radius: 20px;
+    }
+
+    .card {
+      min-width: 280px;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 30px rgba(124,124,255,0.15);
+    }
+
+    .card h3 {
+      color: #00f5ff;
+      margin-bottom: 10px;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 120px 20px;
+      text-align: center;
+      background: radial-gradient(circle at center, #1e40af, #020617);
+    }
+
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 16px 40px;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #00f5ff, #7c7cff);
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .cta a:hover {
+      transform: scale(1.05);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section {
+        grid-template-columns: 1fr;
+        padding: 80px 20px;
+      }
+
+      .horizontal {
+        padding: 80px 20px;
+      }
+
+      .cta h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>AI & Masa Depan Contact Center</h1>
+      <p>Solusi omnichannel berbasis kecerdasan buatan yang mengubah cara bisnis berinteraksi dengan pelanggan.</p>
+    </div>
+    <div class="hero-visual">
+      🤖
+    </div>
+  </section>
+
+  <!-- ZIGZAG 1 -->
+  <section class="section">
+    <div>
+      <h2>AI Chatbot Omnichannel</h2>
+      <p>Melayani pelanggan secara otomatis melalui WhatsApp, web, aplikasi, dan sosial media dalam satu sistem.</p>
+    </div>
+    <div class="glass-box">
+      Integrasi multi-channel + NLP + auto-reply cerdas.
+    </div>
+  </section>
+
+  <!-- ZIGZAG 2 -->
+  <section class="section">
+    <div>
+      <h2>Voice AI Assistant</h2>
+      <p>Bot suara yang mampu menjawab panggilan, mengenali maksud pelanggan, dan memberi solusi instan.</p>
+    </div>
+    <div class="glass-box">
+      Speech recognition + Natural language understanding.
+    </div>
+  </section>
+
+  <!-- HORIZONTAL -->
+  <section class="horizontal">
+    <h2>Fitur Unggulan</h2>
+    <div class="scroll">
+      <div class="card">
+        <h3>Smart Routing</h3>
+        <p>Mengarahkan pelanggan ke agen paling tepat.</p>
+      </div>
+      <div class="card">
+        <h3>Sentiment AI</h3>
+        <p>Mendeteksi emosi pelanggan.</p>
+      </div>
+      <div class="card">
+        <h3>Auto Ticketing</h3>
+        <p>Klasifikasi tiket otomatis.</p>
+      </div>
+      <div class="card">
+        <h3>Analytics</h3>
+        <p>Insight real-time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Siap Beralih ke Contact Center Berbasis AI?</h2>
+    <p>Bangun pengalaman pelanggan yang cepat, cerdas, dan personal.</p>
+    <a href="#">Hubungi Kami</a>
+  </section>
+
+</body>
+</html>
